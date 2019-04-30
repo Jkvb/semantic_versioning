@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- Versionado Semántico VIEWS -->
+
+        <record id="semantic_versioning_action" model="ir.actions.act_window">
+            <field name="name">Versionado Semántico</field>
+            <field name="res_model">semantic.versioning</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="semantic_versioning_form">
+            <field name="name">semantic_versioning_form</field>
+            <field name="model">semantic.versioning</field>
+            <field name="arch" type="xml">
+                <form name="Versionado Semántico">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="semantic_versioning_tree">
+            <field name="name">semantic_versioning_tree</field>
+            <field name="model">semantic.versioning</field>
+            <field name="arch" type="xml">
+                <tree name="Versionado Semántico">
+                    <field name='name'/>
+                </tree>
+            </field>
+        </record>
+
+	<menuitem id="semantic_versioning_dashboard" name="Versionado Semántico" action="semantic_versioning_action" sequence="1" web_icon="semantic_versioning,static/src/img/icon.jpg" groups="base.group_user"/>
+
+
+
+<!-- 	<menuitem name="Versionado" id="semantic_versioning_dashboard" action="semantic_versioning_action" sequence="1" web_icon="semantic_versioning,static/src/img/icon.jpg"/>
+ -->
+    </data>
+</odoo>
